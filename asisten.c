@@ -63,7 +63,7 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 						if (strcmp(e,"LSS")==0){
 							rg=3;}
 					}while(rg<0||rg>3);
-					if((a[mg][hr][0].satu==c||a[mg][hr][0].dua==c||a[mg][hr][1].satu==c||a[mg][hr][1].dua==c||a[mg][hr][2].satu==c||a[mg][hr][2].dua==c||a[mg][hr][3].satu==c||a[mg][hr][3].dua==c)){//validasi asisten sudah ada diruangan lain,maupun disitu
+					if((a[mg][hr][0].satu==c||a[mg][hr][0].dua==c||a[mg][hr][1].satu==c||a[mg][hr][1].dua==c||a[mg][hr][2].satu==c||a[mg][hr][2].dua==c||a[mg][hr][3].satu==c||a[mg][hr][3].dua==c)){//validasi apakah asisten terdapat disruangan lain di hari itu
 						printf("sudah terdapat asisten tersebut disalah satu ruangan\n");
 					}else{
 					
@@ -72,8 +72,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							switch(c){
 							case 'a':
 							case 'A':
-								if((hr!=2) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=2) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -84,8 +84,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'b':
 							case 'B':
-								if((hr!=0) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=0) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -96,8 +96,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'c':
 							case 'C':
-								if((hr!=2)&&(hr!=1) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=2)&&(hr!=1) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -108,8 +108,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'd':
 							case 'D':
-								if((hr!=2)&&(hr !=0) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=2)&&(hr !=0) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -120,8 +120,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'e':
 							case 'E':
-								if( (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)||(strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if( (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)||(strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -131,8 +131,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'f':
 							case 'F':
-								if((hr!=1) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=1) && (strcmp(b[mg][hr][rg].matkul,"EL2205")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -143,8 +143,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'g':
 							case 'G':
-								if((hr!=3) && ((strcmp(b[mg][hr][rg].matkul,"EL2205")==0)|| (strcmp(b[mg][hr][rg].matkul,"EL2200")==0))){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=3) && ((strcmp(b[mg][hr][rg].matkul,"EL2205")==0)|| (strcmp(b[mg][hr][rg].matkul,"EL2200")==0))){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -155,8 +155,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'h':
 							case 'H':
-								if((hr!=3) && (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=3) && (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -167,8 +167,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'i':
 							case 'I':
-								if((hr!=2) && ( (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)||(strcmp(b[mg][hr][rg].matkul,"EL2205")==0)||(strcmp(b[mg][hr][rg].matkul,"EB2200")==0))){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=2) && ( (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)||(strcmp(b[mg][hr][rg].matkul,"EL2205")==0)||(strcmp(b[mg][hr][rg].matkul,"EB2200")==0))){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -178,8 +178,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'j':
 							case 'J':
-								if((hr!=4) && ( strcmp(b[mg][hr][rg].matkul,"EL2208")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=4) && ( strcmp(b[mg][hr][rg].matkul,"EL2208")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -190,8 +190,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'k':
 							case 'K':
-								if((hr!=4) && ( (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)||(strcmp(b[mg][hr][rg].matkul,"EB2200")==0))){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=4) && ( (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)||(strcmp(b[mg][hr][rg].matkul,"EB2200")==0))){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -202,8 +202,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'l':
 							case 'L':
-								if((strcmp(b[mg][hr][rg].matkul,"EL2208")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((strcmp(b[mg][hr][rg].matkul,"EL2208")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -213,8 +213,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'm':
 							case 'M':
-								if((hr!=2)&&(hr!=3) && (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=2)&&(hr!=3) && (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -225,8 +225,8 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 							break;
 							case 'n':
 							case 'N':
-								if((hr!=1) &&  ( (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)||(strcmp(b[mg][hr][rg].matkul,"EB2200")==0))){
-									if(a[mg][hr][rg].satu=='0'){
+								if((hr!=1) &&  ( (strcmp(b[mg][hr][rg].matkul,"EL2208")==0)||(strcmp(b[mg][hr][rg].matkul,"EB2200")==0))){//validasi kesesuaian karakteristik asisten
+									if(a[mg][hr][rg].satu=='0'){//validasi apakah asisten di koordinat itu penuh
 										a[mg][hr][rg].satu=c;
 									}else if(a[mg][hr][rg].dua=='0'){
 										a[mg][hr][rg].dua=c;}
@@ -241,16 +241,16 @@ void aam(asis a[12][5][4],jdl b[12][5][4]){//memasukan manual jadwal asisten
 		  }
 	}while (c!='q' && c!='Q');
 }
-void disas(asis a[12][5][4]){
+void disas(asis a[12][5][4]){//display asisten
 	int i,j,k;
 	printf("|--------------------------------------------------------------------|\n");
 	printf("|Ruang Praktikum |    LAB1    |    LAB2    |    LAB3    |    LSS     |\n");
 	printf("|----------------|------------|------------|------------|------------|\n");
 	printf("|Minggu |  Hari  |------------|------------|------------|------------|\n");
 	printf("|-------|--------|------------|------------|------------|------------|\n");
-	for (i=0;i<=11;i++){
-		for(j=0;j<=4;j++){
-			if (i+3<10){
+	for (i=0;i<=11;i++){//iterasi untuk minggu
+		for(j=0;j<=4;j++){//iterasi untuk hari
+			if (i+3<10){//penyesuaian kolom minggu 1 digit dan 2 digit
 				switch(j){
 					case 0 :printf("|   %d   | Senin  |",i+3);
 					break;
@@ -277,7 +277,7 @@ void disas(asis a[12][5][4]){
 					break;
 				}
 			}
-			for(k=0;k<=3;k++){
+			for(k=0;k<=3;k++){//validasi dan input isi dari array ke display
 					if (a[i][j][k].satu!='0'){
 						if(a[i][j][k].dua=='0'){
 							printf("     %c      |",a[i][j][k].satu);
@@ -294,7 +294,7 @@ void disas(asis a[12][5][4]){
 	}
 }
 
-void savefile(jdl romb[12][5][4], asis as[12][5][4], char nama[100])
+void savefile(jdl romb[12][5][4], asis as[12][5][4], char nama[100])//save file
 {
 	int i, j, k;
 	char temp[500];
@@ -304,12 +304,12 @@ void savefile(jdl romb[12][5][4], asis as[12][5][4], char nama[100])
 	rombo = fopen(temp,"w+");
 	printf("\nRombongan disimpan dalam berkas %s\n",temp);
 	fprintf(rombo, "Ruang Praktikum,,LAB 1,LAB 2,LAB 3,LSS\nMinggu,Hari,,,,\n");
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 12; i++)//iterasi minggu
 	{	
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 5; j++)//iterasi hari
 		{
-			fprintf(rombo, "%d,", i+3);
-			switch (j)
+			fprintf(rombo, "%d,", i+3);//print minggu ke file
+			switch (j)//case print hari
 			{
 				case 0:
 					fprintf(rombo, "Senin,");
@@ -327,7 +327,7 @@ void savefile(jdl romb[12][5][4], asis as[12][5][4], char nama[100])
 					fprintf(rombo, "Jumat,");
 					break;
 			}
-			for (k = 0; k < 4; k++)
+			for (k = 0; k < 4; k++)//validasi di koordinat itu terdapat atau tidaknya jadwal
 			{
 				if (strcmp(romb[i][j][k].matkul,"0") == 0)
 				{		
@@ -341,17 +341,17 @@ void savefile(jdl romb[12][5][4], asis as[12][5][4], char nama[100])
 		}
 	}
 	fclose(rombo);
-	FILE*ass;
+	FILE*ass;//untuk asisten
 	strcpy(temp,nama);
 	strcat(temp,"_asisten.csv");
 	ass = fopen(temp, "w+");
 	printf("Asisten disimpan dalam berkas %s\n",temp);
 	fprintf(ass, "Ruang Praktikum,,LAB 1,LAB 2,LAB 3,LSS\nMinggu,Hari,,,,\n");
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 12; i++)//untuk minggu
 	{	
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 5; j++)//untuk hari
 		{
-			fprintf(ass, "%d,", i+3);
+			fprintf(ass, "%d,", i+3);//display hari
 			switch (j)
 			{
 				case 0:
@@ -370,7 +370,7 @@ void savefile(jdl romb[12][5][4], asis as[12][5][4], char nama[100])
 					fprintf(ass, "Jumat,");
 					break;
 			}
-			for (k = 0; k < 4; k++)
+			for (k = 0; k < 4; k++)//display data,dan validasi apakah satu dua atau nol orang
 			{
 				if (as[i][j][k].satu != '0')
 				{
@@ -391,7 +391,7 @@ void savefile(jdl romb[12][5][4], asis as[12][5][4], char nama[100])
 	}
 	fclose(ass);
 }
-void loadfile(jdl romb[12][5][4], asis as[12][5][4], char nama[100]){
+void loadfile(jdl romb[12][5][4], asis as[12][5][4], char nama[100]){//load file untuk menu utama 2
 
 	int i, j, k;
 	char temp[500];
@@ -400,14 +400,14 @@ void loadfile(jdl romb[12][5][4], asis as[12][5][4], char nama[100]){
 	strcat(temp,"_rombongan.csv");
 	rombo = fopen(temp,"r");
 	
-	for (int i = 0; i < 5; i++) fscanf(rombo, " %s", temp);
+	for (int i = 0; i < 5; i++) fscanf(rombo, " %s", temp);//menghabiskan pembacaan dari header file
 	fscanf(rombo, " %s", temp);
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 12; i++)//iterasi pembacaan minggu
 	{	
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 5; j++)//iterasi pembacaan hari
 		{
-			fscanf(rombo, " %s", temp);
-			for (k = 0; k < 4; k++)
+			fscanf(rombo, " %s", temp);//menghabiskan pembacaan hari
+			for (k = 0; k < 4; k++)//validasi apakah jadwal kosong apa tidak
 			{
 				fscanf(rombo, " %s", temp);
 				if (strcmp(temp,",") == 0)
@@ -433,19 +433,19 @@ void loadfile(jdl romb[12][5][4], asis as[12][5][4], char nama[100]){
 			}
 		}
 	}
-	fclose(rombo);
+	fclose(rombo);//baca file asisten
 	FILE*ass;
 	strcpy(temp,nama);
 	strcat(temp,"_asisten.csv");
 	ass = fopen(temp, "r");
 	for (int i = 0; i < 5; i++) fscanf(rombo, " %s", temp);
 	fscanf(rombo, " %s", temp);
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 12; i++)//untuk minggu
 	{	
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 5; j++)//untuk hari
 		{
 			fscanf(rombo, " %s", temp);
-			for (k = 0; k < 4; k++)
+			for (k = 0; k < 4; k++)//kasus 1,2 atau 0 asisten
 			{
 				fscanf(rombo, " %s", temp);
 				if(temp[0]==','){ 
@@ -464,7 +464,7 @@ void loadfile(jdl romb[12][5][4], asis as[12][5][4], char nama[100]){
 	}
 	fclose(ass);
 }
-void cksc (jdl a[12][5][4]){
+void cksc (jdl a[12][5][4]){//rule checker
 	printf("[DRC]\nMasukkan File DRC (dalam format .txt):");
 	char nama[10000];
 	scanf(" %s",nama);
@@ -473,12 +473,12 @@ void cksc (jdl a[12][5][4]){
 	ck=fopen(nama,"r");
 	cl=0;
 	cr=0;
-	while (!feof(ck)) { //Minggu
+	while (!feof(ck)) { //cek endof file
 		fscanf(ck,"%s",nama);
-		if (nama[0] != '\0') {
-			mg=atoi(nama)-3;
+		if (nama[0] != '\0') {//masuk program jika tidak eof
+			mg=atoi(nama)-3;//minggu
 			fscanf(ck,"%s",nama); //Hari
-			if (strcmp(nama,"Senin")==0){hr=0;}
+			if (strcmp(nama,"Senin")==0){hr=0;}//hari
 			if (strcmp(nama,"Selasa")==0){hr=1;}
 			if (strcmp(nama,"Rabu")==0){hr=2;}
 			if (strcmp(nama,"Kamis")==0){hr=3;}
@@ -489,8 +489,8 @@ void cksc (jdl a[12][5][4]){
 					b=1;
 				}
 			}
-			if(b==1){cl++;}
-			cr++;
+			if(b==1){cl++;}//counting bermasalah
+			cr++;//counting libur
 			nama[0] = '\0';
 		}
 	}
