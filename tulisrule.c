@@ -2,16 +2,17 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
+//fungsi untuk cetak file txt
 int main(){
 	int a,i,b;
 	char nama[10000];
-	printf("nama file(txt):");
+	printf("nama file(txt):");//input nama file
 	scanf(" %s",nama);
 	FILE* ck;
-	printf("banyak rule:");
+	printf("banyak rule:");//banyak libur
 	scanf(" %d",&a);
 	ck=fopen(nama,"w");
-	for(i=0;i<a;i++){
+	for(i=0;i<a;i++){//iterasi input banyak Libur
 		printf("minggu ke(3-14):");
 		do{
 			scanf(" %d",&b);
